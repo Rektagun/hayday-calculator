@@ -512,6 +512,9 @@ function App() {
   const [requiredItems, setRequiredItems] = useState([]);
 
   const productNames = Object.values(products).map(product => (product.name));
+  const productIcons = Object.values(products).map(product => (product.icon));
+
+  console.log(productIcons);
 
   const calculateList = () => {
     var list = {};
@@ -556,7 +559,6 @@ function App() {
         Add items from this list!
       </h1>
 
-
       <div className='grid grid-cols-2 text-sm font-bold bg-red-100 w-full'>
 
         {Object.entries(productNames).map(([id, name]) => (
@@ -571,6 +573,7 @@ function App() {
             {/* {/1* <img src={icon} alt='alt' /> *1/} </button> */}
           </div>
         ))}
+
       </div>
 
 
