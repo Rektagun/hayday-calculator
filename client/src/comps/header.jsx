@@ -4,9 +4,9 @@ import '../output.css'
 
 function Header() {
   return (
-      <header className="bg-black">
-        <div className='justify-center flex text-white font-bold p-1'> 
-          Hay Day Thing
+      <header className="bg-black lobster-regular">
+        <div className='justify-center flex text-white p-1'> 
+          HayDay Thing
         </div>
       </header>
   )

@@ -12,6 +12,7 @@ function App() {
       "ingredients": { 
         "wheat": 3
       },
+      "count": 0,
       "icon": './icons/Bread.webp' 
     },
 
@@ -21,6 +22,7 @@ function App() {
         "wheat": 2,
         "corn": 1
       },
+      "count": 0,
       "icon": './icons/Butter.webp' 
     },
 
@@ -29,6 +31,7 @@ function App() {
       "ingredients": { 
         "sugarcane": 1
       },
+      "count": 0,
       "icon": './icons/Brown_Sugar.webp' 
     },
 
@@ -37,6 +40,7 @@ function App() {
       "ingredients": { 
         "corn": 2
       },
+      "count": 0,
       "icon": './icons/Popcorn.webp' 
     },
 
@@ -46,6 +50,7 @@ function App() {
         "corn": 2,
         "milk": 2
       },
+      "count": 0,
       "icon": './icons/Buttered_Popcorn.webp' 
     },
 
@@ -55,6 +60,7 @@ function App() {
         "corn": 2,
         "chilipepper": 2
       },
+      "count": 0,
       "icon": './icons/Chili_Popcorn.webp' 
     },
 
@@ -64,6 +70,7 @@ function App() {
         "egg": 3,
         "sugarcane": 1
       },
+      "count": 0,
       "icon": './icons/Pancake.webp' 
     },
 
@@ -74,6 +81,7 @@ function App() {
         "egg": 2,
         "sugarcane": 1
       },
+      "count": 0,
       "icon": './icons/Cookie.webp' 
     },
 
@@ -83,6 +91,7 @@ function App() {
         "bacon": 2,
         "egg": 4
       },
+      "count": 0,
       "icon": './icons/Bacon_and_Eggs.webp' 
     },
 
@@ -92,6 +101,7 @@ function App() {
         "bacon": 2,
         "wheat": 6
       },
+      "count": 0,
       "icon": './icons/Hamburger.webp' 
     },
 
@@ -102,6 +112,7 @@ function App() {
         "wheat": 6,
         "chilipepper": 1
       },
+      "count": 0,
       "icon": './icons/Fish_Burger.webp' 
     },
 
@@ -110,6 +121,7 @@ function App() {
       "ingredients": { 
         "tomato": 2
       },
+      "count": 0,
       "icon": './icons/Roasted_Tomatoes.webp' 
     },
 
@@ -118,6 +130,7 @@ function App() {
       "ingredients": { 
         "milk": 3
       },
+      "count": 0,
       "icon": './icons/Cheese.webp' 
     },
 
@@ -126,6 +139,7 @@ function App() {
       "ingredients": { 
         "goatmilk": 2
       },
+      "count": 0,
       "icon": './icons/Goat_Cheese.webp' 
     },
 
@@ -134,6 +148,7 @@ function App() {
       "ingredients": { 
         "sugarcane": 2
       },
+      "count": 0,
       "icon": './icons/White_Sugar.webp' 
     },
 
@@ -144,6 +159,7 @@ function App() {
         "tomato": 1,
         "milk": 3
       },
+      "count": 0,
       "icon": './icons/Pizza.webp' 
     },
 
@@ -152,6 +168,7 @@ function App() {
       "ingredients": { 
         "sugarcane": 4
       },
+      "count": 0,
       "icon": './icons/Syrup.webp' 
     },
 
@@ -162,6 +179,7 @@ function App() {
         "wheat": 2,
         "egg": 1,
       },
+      "count": 0,
       "icon": './icons/Carrot.webp' 
     },
 
@@ -172,6 +190,7 @@ function App() {
         "egg": 1,
         "wheat": 3
       },
+      "count": 0,
       "icon": './icons/Pumpkin_Pie.webp' 
     },
 
@@ -182,6 +201,7 @@ function App() {
         "egg": 1,
         "wheat": 2
       },
+      "count": 0,
       "icon": './icons/Fish_Pie.webp' 
     },
 
@@ -193,6 +213,7 @@ function App() {
         "sugarcane": 4,
         "wheat": 2
       },
+      "count": 0,
       "icon": './icons/Apple_Pie.webp' 
     },
 
@@ -203,6 +224,7 @@ function App() {
         "wheat": 2,
         "egg": 1
       },
+      "count": 0,
       "icon": './icons/Feta_Pie.webp' 
     },
 
@@ -213,6 +235,7 @@ function App() {
         "egg": 1,
         "wheat": 2,
       },
+      "count": 0,
       "icon": './icons/Bacon_Pie.webp' 
     },
 
@@ -221,6 +244,7 @@ function App() {
       "ingredients": { 
         "cotton": 3
       },
+      "count": 0,
       "icon": './icons/Cotton_Fabric.webp' 
     },
 
@@ -229,6 +253,7 @@ function App() {
       "ingredients": { 
         "cotton": 6
       },
+      "count": 0,
       "icon": './icons/Cotton_Shirt.webp' 
     },
 
@@ -239,6 +264,7 @@ function App() {
         "milk": 2,
         "sugarcane": 1
       },
+      "count": 0,
       "icon": './icons/Carrot_Cake.webp' 
     },
 
@@ -249,6 +275,7 @@ function App() {
         "milk": 1,
         "sugarcane": 2
       },
+      "count": 0,
       "icon": './icons/Cream_Cake.webp' 
     },
 
@@ -258,6 +285,7 @@ function App() {
         "wool": 3,
         "cotton": 3
       },
+      "count": 0,
       "icon": './icons/Wooly_Chaps.webp' 
     },
 
@@ -267,6 +295,7 @@ function App() {
         "wool": 1,
         "indigo": 1
       },
+      "count": 0,
       "icon": './icons/Blue_Woolly_Hat.webp' 
     },
 
@@ -276,6 +305,7 @@ function App() {
         "wool": 2,
         "indigo": 2
       },
+      "count": 0,
       "icon": './icons/Blue_Sweater.webp' 
     },
 
@@ -287,6 +317,7 @@ function App() {
         "egg": 2,
         "sugarcane": 1
       },
+      "count": 0,
       "icon": './icons/Cheesecake.webp' 
     },
 
@@ -298,6 +329,7 @@ function App() {
         "egg": 1,
         "milk": 1
       },
+      "count": 0,
       "icon": './icons/Red_Berry_Cake.webp' 
     },
 
@@ -306,6 +338,7 @@ function App() {
       "ingredients": { 
         "silverore": 3
       },
+      "count": 0,
       "icon": './icons/Silver_Bar.webp' 
     },
 
@@ -314,6 +347,7 @@ function App() {
       "ingredients": { 
         "goldore": 3
       },
+      "count": 0,
       "icon": './icons/Gold_Bar.webp' 
     },
 
@@ -322,6 +356,7 @@ function App() {
       "ingredients": { 
         "ironore": 3
       },
+      "count": 0,
       "icon": './icons/Iron_Bar.webp' 
     },
 
@@ -330,6 +365,7 @@ function App() {
       "ingredients": { 
         "platinumore": 3
       },
+      "count": 0,
       "icon": './icons/Platinum_Bar.webp' 
     },
 
@@ -338,6 +374,7 @@ function App() {
       "ingredients": { 
         "coal": 3
       },
+      "count": 0,
       "icon": './icons/Refined_Coal.webp' 
     },
 
@@ -348,6 +385,7 @@ function App() {
         "raspberry": 1,
         "indigo": 1
       },
+      "count": 0,
       "icon": './icons/Violet_Dress.webp' 
     },
 
@@ -358,6 +396,7 @@ function App() {
         "egg": 2,
         "blackberry": 2
       },
+      "count": 0,
       "icon": './icons/Blackberry_Muffin.webp' 
     },
 
@@ -366,6 +405,7 @@ function App() {
       "ingredients": { 
         "carrot": 3
       },
+      "count": 0,
       "icon": './icons/Carrot_Cake.webp' 
     },
 
@@ -374,6 +414,7 @@ function App() {
       "ingredients": { 
         "apple": 2
       },
+      "count": 0,
       "icon": './icons/Apple_Juice.webp' 
     },
 
@@ -382,6 +423,7 @@ function App() {
       "ingredients": { 
         "cherry": 2
       },
+      "count": 0,
       "icon": './icons/Cherry_Juice.webp' 
     },
 
@@ -390,6 +432,7 @@ function App() {
       "ingredients": { 
         "tomato": 3
       },
+      "count": 0,
       "icon": './icons/Tomato_Juice.webp' 
     },
 
@@ -399,6 +442,7 @@ function App() {
         "blackberry": 1,
         "raspberry": 1
       },
+      "count": 0,
       "icon": './icons/Berry_Juice.webp' 
     },
 
@@ -408,6 +452,7 @@ function App() {
         "sugarcane": 4,
         "cherry": 2
       },
+      "count": 0,
       "icon": './icons/Cherry_Popsicle.webp' 
     },
 
@@ -417,6 +462,7 @@ function App() {
         "milk": 3,
         "sugarcane": 4
       },
+      "count": 0,
       "icon": './icons/Vanilla_Ice_Cream.webp' 
     },
 
@@ -427,6 +473,7 @@ function App() {
         "sugarcane": 2,
         "milk": 2,
       },
+      "count": 0,
       "icon": './icons/Strawberry_Ice_Cream.webp' 
     },
 
@@ -436,6 +483,7 @@ function App() {
         "carrot": 2,
         "soybean": 1
       },
+      "count": 0,
       "icon": './icons/Pig_Feed.webp' 
     },
 
@@ -446,6 +494,7 @@ function App() {
         "wheat": 2,
         "corn": 1
       },
+      "count": 0,
       "icon": './icons/Chicken_Feed.webp'
 
     },
@@ -456,6 +505,7 @@ function App() {
         "wheat": 3,
         "soybean": 1
       },
+      "count": 0,
       "icon": './icons/Sheep_Feed.webp'
 
     },
@@ -467,6 +517,7 @@ function App() {
         "wheat": 1,
         "corn": 1
       },
+      "count": 0,
       "icon": './icons/Goat_Feed.webp'
 
     },
@@ -476,6 +527,7 @@ function App() {
       "ingredients": { 
         "wool": 2
       },
+      "count": 0,
       "icon": './icons/Sweater.webp'
 
     },
@@ -485,8 +537,8 @@ function App() {
       "ingredients": { 
         "milk": 1
       },
+      "count": 0,
       "icon": './icons/Cream.webp'
-
     },
 
     "p54": { 
@@ -495,8 +547,8 @@ function App() {
         "corn": 2,
         "egg": 2
       },
+      "count": 0,
       "icon": './icons/Corn_Bread.webp'
-
     },
 
     "p55": { 
@@ -505,17 +557,13 @@ function App() {
         "soybean": 2,
         "corn": 1
       },
+      "count": 0,
       "icon": './icons/Cow_Feed.webp'
     },
   };
 
   const [requiredItems, setRequiredItems] = useState([]);
-
-  const productNames = Object.values(products).map(product => (product.name));
-  const productIcons = Object.values(products).map(product => (product.icon));
-
-  console.log(productIcons);
-
+  
   const calculateList = () => {
     var list = {};
 
@@ -527,13 +575,14 @@ function App() {
               list[ingredient] = products[product].ingredients[ingredient];
             }
             else {
-              list[ingredient] = list[ingredient] + (products[product].ingredients[ingredient]);
+              list[ingredient] = list[ingredient] + (
+                products[product].ingredients[ingredient]
+              );
             }
           }
         }
       }
     }
-
     return list;
   };
 
@@ -547,49 +596,70 @@ function App() {
 
   const list = calculateList();
 
-
   return (
-
 
     <div className='p-1 border-black overflow-x-clip'>
 
       <Header />
 
-      <h1 className='font-extrabold text-2xl flex justify-center'>
+      <h1 className='font-extrabold lobster-regular text-2xl flex justify-center'>
         Add items from this list!
       </h1>
 
-      <div className='grid grid-cols-2 text-sm font-bold bg-red-100 w-full'>
+      <div className='grid gap-1 grid-cols-3 text-sm font-bold w-full h-full'>
 
-        {Object.entries(productNames).map(([id, name]) => (
-          <div key={id} className='flex flex-row'>
+        {Object.entries(products).map(([id, product]) => (
+
+          <div key={id} className='flex flex-row border-red-900 
+            border-2 bg-red-100 rounded justify-between'>
+
             <button 
-              onClick={() => handleRemoveItem(name)}
-              className='text-3xl font-bold text-red-500'>-</button>
-            <button 
-              onClick={
-                () => handleAddItem(name)}
-              className='border-black text-sm border h-10 w-10'>{name}</button>
-            {/* {/1* <img src={icon} alt='alt' /> *1/} </button> */}
+              onClick={() => handleAddItem(product.name)}
+              className='size-10 flex rounded active:bg-green-200 
+              border-black border-2 group my-auto hover:animate-pulse'>
+              <img className='hover:size-8 m-auto group-active:size-6' 
+                src={product.icon} alt={product.name} />
+            </button>
+
+
+            <div className='border-black border h-full rounded flex-col'> 
+
+              <button 
+                onClick={() => handleRemoveItem(product.name)}
+                className='text-red-500 hover:bg-red-700 w-5 h-2 flex
+                active:bg-red-400 bg-red-600 border-black border rounded-sm'>
+              </button>
+
+              <div className='border border-black rounded h-5 w-5 flex'>
+                {product.count}
+              </div>
+
+            </div>
+
           </div>
         ))}
 
       </div>
 
+      <h1 className='lobster-regular text-2xl flex justify-center'>
+        Items you need!
+      </h1>
 
-
-
-
-      <div className='grid grid-cols-4'>
+      <div className='grid my-1 gap-1 grid-cols-3 text-sm font-bold w-full 
+        h-full'>
 
         {Object.entries(list).map(([item, amount]) => (
 
-          <div key={item} className=''>
+          <div key={item} className='flex flex-row border-red-900 border-2 
+            h-10 w-full rounded justify-between bg-green-50'>
 
-            <button className='border-black text-sm border h-10 w-10'>{item}</button>
-
-            <span className='absolute mt-5'>{amount}</span>
-
+            <button className='flex border-black border rounded mr-0'>
+              {item}
+            </button>
+            <div className='flex w-5 h-5 justify-center border-black border rounded'>
+              {amount}
+            </div>
+              {/* <img className='hover:size-8 m-auto group-active:size-6' src={product.icon} alt={product.name} /> */}
           </div>
         ))}
       </div>
