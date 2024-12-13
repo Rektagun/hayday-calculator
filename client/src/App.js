@@ -1507,10 +1507,9 @@ function App() {
     },
   ]);
 
+  const [needDb, setNeedDb] = useState([]);
 
-  const [needDb, setneedDb] = useState([]);
   const [inventoryDb, setinventoryDb] = useState([]);
-
 
   const incrementCount = (id) => {
     const newDb = Db.map((product) => {
@@ -1545,29 +1544,56 @@ function App() {
           ...product,
           count: 0
         };
-      }
+      };
       return product;
-    })
+    });
     setDb(newDb);
+
+    const newNeedDb = needDb.map((product) => {
+      if (product.id === id) {
+        return {
+          ...product,
+          count: 0
+        };
+      };
+      return product;
+    });
+    setNeedDb(newNeedDb);
   };
 
-
   return (
-    <div className='mx-auto text-indigo-950 bg-blue-50 h-screen pt-8 px-4 overflow-auto'>
 
-      <div className='flex flex-row flex-wrap justify-center w-1/2'> 
+    <div className='text-indigo-950 bg-slate-100 rounded-lg'>
 
-        {Db.map((product) =>
-          <ItemCard className='flex flex-row'
-            key={product.id}
-            incrementCount={() => incrementCount(product.id)}
-            icon_File={product.icon}
-            count={product.count}
-            name={product.name}
-            decrementCount={() => decrementCount(product.id)}
-            removeProduct={() => removeProduct(product.id)}
-          />
-        )}
+      <div className='flex flex-row'> 
+        <div className='flex flex-row flex-wrap justify-center w-1/2'> 
+
+          {Db.map((product) =>
+            <ItemCard className='flex flex-row'
+              key={product.id}
+              incrementCount={() => incrementCount(product.id)}
+              icon_File={product.icon}
+              count={product.count}
+              name={product.name}
+              decrementCount={() => decrementCount(product.id)}
+              removeProduct={() => removeProduct(product.id)}
+            />
+          )}
+
+        </div>
+
+        <div className='flex flex-row flex-wrap justify-center w-1/2'> 
+
+          {needDb.map((product) =>
+            <ItemCard className='flex flex-row'
+              key={product.id}
+              icon_File={product.icon}
+              count={product.count}
+              name={product.name}
+            />
+          )}
+
+        </div>
 
       </div>
 
