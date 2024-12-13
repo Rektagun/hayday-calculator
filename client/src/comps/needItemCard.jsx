@@ -1,7 +1,7 @@
 import React from "react";
 import "../output.css"
 
-const ItemCard = ({
+const needItemCard = ({
   incrementCount,
   icon_File,
   name,
@@ -29,8 +29,8 @@ const ItemCard = ({
 
         <div className="my-auto border-red-600 rounded-lg">
           {count < 1 && (
-            <div className='flex my-auto opacity-100 justify-center rounded-lg text-center 
-              text-sm'>{name}</div>
+            <div className='flex my-auto opacity-100 justify-center rounded-lg 
+              text-center text-sm'>{name}</div>
           )}
           {count > 0 && (
             <div className='flex my-auto justify-center rounded-lg text-center 
@@ -57,4 +57,4 @@ const ItemCard = ({
   );
 }
 
-export default ItemCard;
+export default needItemCard;
