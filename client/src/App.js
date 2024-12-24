@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 // import Barn from './comps/barn';
 import ItemCard from './comps/itemCard';
 // import Silo from './comps/silo';
@@ -7,7 +7,6 @@ import Inventory from './comps/inventory';
 import './output.css';
 
 function App() {
-
 
   const [Db, setDb] = useState([
     { 
@@ -90,7 +89,6 @@ function App() {
       icon: "./icons/Milk.webp",
       count: 0,
     },
-
     { 
       id: 9,
       level: 6,
@@ -1172,7 +1170,6 @@ function App() {
       icon: "./icons/Frutti_di_Mare_Pizza.webp",
       count: 0,
     },
-
     { 
       id: 116,
       level: 1,
@@ -1253,7 +1250,6 @@ function App() {
       icon: "./icons/Lobster_Skewer.webp",
       count: 0,
     },
-
     { 
       id: 124,
       level: 1,
@@ -1334,7 +1330,6 @@ function App() {
       icon: "./icons/Duck_Trap.webp",
       count: 0,
     },
-
     { 
       id: 132,
       level: 1,
@@ -1508,10 +1503,10 @@ function App() {
   ]);
 
   const [needDb, setNeedDb] = useState([]);
-
-  const [inventoryDb, setinventoryDb] = useState([]);
+  const [actaualNeedDb, setactualNeedDb] = useState([]);
 
   const incrementCount = (id) => {
+
     const newDb = Db.map((product) => {
       if (product.id === id) {
         return {
@@ -1522,6 +1517,22 @@ function App() {
       return product;
     });
     setDb(newDb);
+
+    const newNeedDb = newDb.filter((product) => {
+      if (product.count > 0) {
+        return product
+      }
+      return null;
+    })
+    setNeedDb(newNeedDb);
+
+    const actaualNeedDb = newNeedDb.map((product) => {
+      return product.needs;
+    })
+    setactualNeedDb(actaualNeedDb)
+
+    console.log(actaualNeedDb);
+
   };
 
   const decrementCount = (id) => {
@@ -1535,6 +1546,12 @@ function App() {
       return product;
     });
     setDb(newDb);
+
+    const newNeedDb = newDb.filter((product) => {
+      return product.count > 0;
+    })
+    setNeedDb(newNeedDb);
+
   };
 
   const removeProduct = (id) => {
@@ -1549,52 +1566,51 @@ function App() {
     });
     setDb(newDb);
 
-    const newNeedDb = needDb.map((product) => {
-      if (product.id === id) {
-        return {
-          ...product,
-          count: 0
-        };
-      };
-      return product;
-    });
+    const newNeedDb = newDb.filter((product) => {
+      return product.count > 0;
+    })
     setNeedDb(newNeedDb);
   };
 
   return (
 
-    <div className='text-indigo-950 bg-slate-100 rounded-lg'>
+    <div className='text-indigo-950 rounded-lg'>
 
       <div className='flex flex-row'> 
-        <div className='flex flex-row flex-wrap justify-center w-1/2'> 
 
-          {Db.map((product) =>
-            <ItemCard className='flex flex-row'
-              key={product.id}
-              incrementCount={() => incrementCount(product.id)}
-              icon_File={product.icon}
-              count={product.count}
-              name={product.name}
-              decrementCount={() => decrementCount(product.id)}
-              removeProduct={() => removeProduct(product.id)}
-            />
-          )}
+        <div className='bg-slate-300 rounded-lg w-1/2'>
+          <div className='flex flex-row flex-wrap justify-center'> 
 
-        </div>
-
-        <div className='flex flex-row flex-wrap justify-center w-1/2'> 
-
-          {needDb.map((product) =>
-            <ItemCard className='flex flex-row'
-              key={product.id}
-              icon_File={product.icon}
-              count={product.count}
-              name={product.name}
-            />
-          )}
+            {Db.map((product) =>
+              <ItemCard className='flex flex-row'
+                key={product.id}
+                incrementCount={() => incrementCount(product.id)}
+                icon_File={product.icon}
+                count={product.count}
+                name={product.name}
+                decrementCount={() => decrementCount(product.id)}
+                removeProduct={() => removeProduct(product.id)}
+              />
+            )}
+          </div>
 
         </div>
 
+
+        <div className='bg-slate-200 rounded-lg w-1/2'>
+          <div className='flex justify-center m-auto flex-wrap'> 
+
+            {needDb.map((product) =>
+              <ItemCard className='flex flex-row'
+                key={product.id}
+                icon_File={product.icon}
+                count={product.count}
+                name={product.name}
+              />
+            )}
+
+          </div>
+        </div>
       </div>
 
     </div>

@@ -12,12 +12,11 @@ const ItemCard = ({
 
   return (
 
-    <div className='flex flex-row h-20 bg-blue-200 w-fit rounded-xl mx-1 my-1 
+    <div className='flex flex-row h-20 bg-blue-200 w-fit rounded-xl m-1 
       justify-between shadow-black shadow-sm hover:shadow-lg 
       hover:shadow-blue-900 group font-sans font-bold'>
 
-      <button className='rounded-xl m-1 hover:bg-green-100 
-        bg-green-200 border-green-500 border-2 active:bg-green-50' 
+      <button className='rounded-xl m-1 border-0 bg-blue-100' 
         onClick={incrementCount}> 
 
         <img className='size-16 self-center z-20 m-auto rounded-lg' 
@@ -36,17 +35,21 @@ const ItemCard = ({
         </button>
 
         <div className="flex-row w-20 flex justify-between">
-          <button onClick={decrementCount} className='font-extrabold border-2 my-auto
-            border-red-600 rounded-lg z-10 bg-red-200 text-center text-red-600 
-            hover:bg-red-100 active:bg-red-50 w-8'>
-            ⊖
-          </button>
+          {count > 0 && (
+            <button onClick={decrementCount} className='font-extrabold border-2 my-auto
+              border-red-600 rounded-lg z-10 bg-red-200 text-center text-red-600 
+              hover:bg-red-100 active:bg-red-50 w-8'>
+              ⊖
+            </button>
+          )}
 
-          <button onClick={removeProduct} className='font-extrabold border-2 my-auto
-            border-red-600 rounded-lg z-10 bg-red-200 text-center text-red-600 
-            hover:bg-red-100 active:bg-red-50 w-8'>
-            x
-          </button>
+          {count > 0 && (
+            <button onClick={removeProduct} className='font-extrabold border-2 my-auto
+              border-red-600 rounded-lg z-10 bg-red-200 text-center text-red-600 
+              hover:bg-red-100 active:bg-red-50 w-8'>
+              x
+            </button>
+          )}
         </div>
 
       </div>
