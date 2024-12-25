@@ -1,11 +1,17 @@
 
+const A_URI = process.env.AURAURI
+const A_PASS = process.env.AURAPASSWORD
+const A_USER = process.env.AURAUSER
+
 var neo4j = require('neo4j-driver');
 
 (async () => {
+
   // URI examples: 'neo4j://localhost', 'neo4j+s://xxx.databases.neo4j.io'
-  const URI = 'neo4j+s://afe81a2a.databases.neo4j.io'
-  const USER = 'neo4j'
-  const PASSWORD = 'VcKQNmXMCW3T2OR_-URhFumMDoFrQWxqnB1LkVfOHEc'
+  const URI = A_URI;
+  const USER = A_USER;
+  const PASSWORD = A_PASS;
+
   let driver
 
   try {
@@ -13,9 +19,6 @@ var neo4j = require('neo4j-driver');
     const serverInfo = await driver.getServerInfo()
     console.log('Connection established')
     console.log(serverInfo)
-
-
-    const basicResult = await neo4j.session.run()
 
 
 
