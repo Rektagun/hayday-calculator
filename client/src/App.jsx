@@ -6,50 +6,30 @@ function App() {
 
   const [user_level, setUserLevel] = useState(5);
   const [itemDetails, setItemDetails] = useState(null);
+  const [cachedData, setCachedData] = useState(null);
 
   function handleChange(e) {
     setUserLevel(e.target.value)
   }
 
-  async function sendLevel() {
-    try {
-      await axios.post('http://localhost:3001/', {
-        value: user_level
-      });
-      console.log(`User's level sent to backend: ${user_level}`);
-    }
-    catch (err) {
-      console.error(`Error while sending level to backend:`, err);
-    }
+  const getData = async () => {
+    const datab = await axios.get('http://localhost:3001/api/data');
+    console.log(datab.data)
+    setCachedData(datab.data);
   }
 
-  async function fetchItemData() {
-    try {
-      const response = await axios.get('http://localhost:3001/')
-      setItemDetails(response.data);
-    }
-    catch (err) {
-      console.error(`Error while fetching items' data:`, err);
-    }
+  function reloadData() {
+    getData();
   }
 
   return (
     <div className="flex flex-col">
       <h1 className="text-center">HayDay Thing</h1>
 
-      <div className="flex flex-row" onSubmit={sendLevel}>
+      <div className="flex flex-row">
 
-        <h6>Your level:</h6>
-
-        <input
-          value={user_level}
-          onChange={handleChange}
-          className="my-auto flex"
-          type="number"
-        />
-
-        <button className="my-auto flex" type="submit" onClick={sendLevel}>
-          DONE
+        <button className="my-auto flex" type="submit" onClick={reloadData}>
+          Reload
         </button>
 
       </div>
