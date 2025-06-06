@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss";
+
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* * { */
+/*   outline-style: solid; */
+/*   outline-width: thin; */
+/* } */
