@@ -5,7 +5,7 @@
   "main": "api/index.js",
   "scripts": {
     "start": "nodemon api/index.js",
-    "vercel-build": "npm run build"
+    "build": "npm run build"
   },
   "author": "",
   "license": "ISC",
