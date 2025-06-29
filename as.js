@@ -91,6 +91,19 @@ let queryData = null;
 //   }
 // });
 
+// itemDetails = results.records.map((record) => {
+//   const node = record.get("p");
+//   return {
+//     // id: node.identity.low,
+//     name: node.properties.name,
+//     maxPrice: node.properties.maxPrice.low,
+//     level: node.properties.level.low,
+//     // type: node.properties.type,
+//     xp: node.properties.xp.low,
+//     imageUrl: node.properties.imageUrl,
+//   };
+// });
+
 app.listen(3001, () => {
   console.log("Server running on port 3001");
 });

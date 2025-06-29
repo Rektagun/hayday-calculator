@@ -1,15 +1,31 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-.lobster-regular {
+.lobster {
   font-family: "Lobster", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-style: normal;
 }
 
 /* * { */
 /*   outline-style: solid; */
 /*   outline-width: thin; */
+/* } */
+
+
+/* :root { */
+/*   --bg-dark: #090d10; */
+/*   --bg: #121a21; */
+/*   --bg-light: #1b2731; */
+/*   --text: #f4f4f4; */
+/*   --text-muted: #b8b8b8; */
+/*   --highlight: #d9d9d9; */
+/*   --border: #5f80a6; */
+/*   --border-muted: #1b2731; */
+/*   --primary: #5f80a6; */
+/*   --secondary: #d6b7b1; */
+/*   --danger: hsl(9 26% 64%); */
+/*   --warning: hsl(52 19% 57%); */
+/*   --success: hsl(146 17% 59%); */
+/*   --info: hsl(217 28% 65%); */
 /* } */
