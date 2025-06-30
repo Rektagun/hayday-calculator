@@ -1,5 +1,5 @@
 import "./output.css";
-import axios, { all } from "axios";
+import axios from "axios";
 import { useState, useEffect } from "react";
 import ItemCard from "./components/itemCard";
 import NeedItemCard from "./components/needItemCard";
