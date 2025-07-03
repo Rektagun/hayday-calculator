@@ -1,1 +1,1 @@
-https://rektagun.github.io/hayday-thing/
+https://rektagun.github.io/hayday-calculator/
