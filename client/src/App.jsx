@@ -19,8 +19,8 @@ function App() {
     setLoading(true);
     try {
       console.log("SENT REQ TO SERVER");
-      // let response = await axios.get(`/api/data?level=${user_level}`);
-      let response = await axios.get(`http://localhost:3001/api/data?level=${user_level}`);
+      let response = await axios.get(`/api/data?level=${user_level}`);
+      // let response = await axios.get(`http://localhost:3001/api/data?level=${user_level}`);
       setDataFromDB(response.data);
       console.log("GOT DATA FROM SERVER ", user_level);
     } catch (err) {
