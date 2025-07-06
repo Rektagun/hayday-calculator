@@ -149,11 +149,18 @@ function App() {
       <div className="flex flex-row gap-1 mt-4">
 
         <section className="text-white/90 w-full bg-slate-700/70 my-2 rounded-3xl flex flex-col">
-          <button
-            className="mx-auto my-4 text-center w-fit flex bg-red-700/80 text-slate-50 text-2xl rounded-md py-2 px-4 hover:bg-slate-600 active:bg-slate-400 duration-200 transition-colors"
-            onClick={resetIngredients}>
-            RESET
-          </button>
+          <div className="flex-row flex justify-center items-center">
+            <a href="https://rektagun.github.io/" target="_blank" rel="noopener noreferrer"
+              className="mx-auto my-4 text-center w-fit flex bg-sky-700/80 text-slate-50 text-sm rounded-md py-1 px-2 hover:bg-slate-600 active:bg-slate-400 duration-200 transition-colors">
+              Made by: Suryaprakash Khatri
+              <span className="scale-110 mx-1">  ⌝</span>
+            </a>
+            <button
+              className="mx-auto my-4 text-center w-fit flex bg-red-700/80 text-slate-50 text-2xl rounded-md py-2 px-4 hover:bg-slate-600 active:bg-slate-400 duration-200 transition-colors"
+              onClick={resetIngredients}>
+              RESET
+            </button>
+          </div>
           {
             countItems && countItems.length > 0 ? (
               <div className="flex flex-row flex-wrap justify-center border-2 border-slate-700 rounded-3xl w-full h-full">
