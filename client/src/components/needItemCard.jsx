@@ -20,7 +20,7 @@ const NeedItemCard = ({
     <div
       onClick={decrementCount}
       // onClick={incrementCount}
-      className={`w-40 h-20 bg-slate-800 hover:bg-red-950/75 border hover:border-b-0 relative m-2 border-slate-600 rounded-2xl z-0 flex items-center pr-2 hover:border-t-red-800 overflow-visible hover:shadow-inner opacity-100 group hover:cursor-pointer hover:scale-105 transition-all duration-200 select-none ease-in-out hover:drop-shadow-slate-950 hover:drop-shadow-md active:scale-95 drop-shadow-md`}>
+      className={`w-40 h-20 bg-slate-800 hover:bg-red-950/75 border hover:border-b-0 relative m-2 hover:border-red-900 border-slate-600 rounded-2xl z-0 flex items-center pr-2 hover:border-t-red-800 overflow-visible hover:shadow-inner opacity-100 group hover:cursor-pointer hover:scale-105 transition-all duration-200 select-none ease-in-out hover:drop-shadow-slate-950 hover:drop-shadow-md active:scale-95 drop-shadow-md`}>
       <img
         // onClick={incrementCount}
         // onContextMenu={(e) => { e.preventDefault(); decrementCount() }}

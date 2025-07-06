@@ -19,8 +19,8 @@ function App() {
     setLoading(true);
     try {
       console.log("SENT REQ TO SERVER");
-      let response = await axios.get(`/api/data?level=${user_level}`);
-      // let response = await axios.get(`http://localhost:3001/api/data?level=${user_level}`);
+      // let response = await axios.get(`/api/data?level=${user_level}`);
+      let response = await axios.get(`http://localhost:3001/api/data?level=${user_level}`);
       setDataFromDB(response.data);
       console.log("GOT DATA FROM SERVER ", user_level);
     } catch (err) {
@@ -50,7 +50,7 @@ function App() {
     getDataForLevel();
   }, []);
 
-  function incrementCount(index) {
+  async function incrementCount(index) {
 
     let tempItems = [];
     for (let i = 0; i < countItems.length; i++) {
@@ -95,7 +95,7 @@ function App() {
     setIngredients(prevIngredients => {
       const tempIngredients = [...prevIngredients];
 
-      if (tempIngredients[index].neededCount > 1) {
+      if (tempIngredients[index]?.neededCount > 1) {
         tempIngredients[index] = {
           ...tempIngredients[index],
           neededCount: tempIngredients[index].neededCount - 1
@@ -151,19 +151,19 @@ function App() {
         <section className="text-white/90 w-full bg-slate-700/70 my-2 rounded-3xl flex flex-col">
           <div className="flex-row flex justify-center items-center">
             <a href="https://rektagun.github.io/" target="_blank" rel="noopener noreferrer"
-              className="mx-auto my-4 text-center w-fit flex bg-sky-700/80 text-slate-50 text-sm rounded-md py-1 px-2 hover:bg-slate-600 active:bg-slate-400 duration-200 transition-colors">
+              className="mx-2 my-4 text-center w-fit flex bg-green-700/80 text-slate-50 text-sm rounded-md py-1 px-2 hover:bg-slate-600 active:bg-slate-400 duration-200 transition-colors">
               Made by: Suryaprakash Khatri
               <span className="scale-110 mx-1">  ⌝</span>
             </a>
             <button
-              className="mx-auto my-4 text-center w-fit flex bg-red-700/80 text-slate-50 text-2xl rounded-md py-2 px-4 hover:bg-slate-600 active:bg-slate-400 duration-200 transition-colors"
+              className="mx-2 my-4 text-center w-fit flex bg-red-700/80 text-slate-50 text-2xl rounded-md py-2 px-4 hover:bg-slate-600 active:bg-slate-400 duration-200 transition-colors"
               onClick={resetIngredients}>
               RESET
             </button>
           </div>
           {
             countItems && countItems.length > 0 ? (
-              <div className="flex flex-row flex-wrap justify-center border-2 border-slate-700 rounded-3xl w-full h-full">
+              <div className="flex flex-row flex-wrap justify-center rounded-3xl w-full h-full">
                 {
                   loading ? (
                     <div className="flex text-center mx-auto">
@@ -189,9 +189,15 @@ function App() {
             ) : (<></>)
           }
         </section>
-        <section className="text-white/90 w-full bg-slate-700/70 my-2 rounded-3xl flex justify-center items-center h-fit">
+        <section className="text-white/90 w-full bg-slate-700/70 my-2 rounded-3xl flex flex-col justify-center items-center h-fit">
+          <div className="flex-row flex justify-center items-center">
+          </div>
           {ingredients && ingredients.length > 0 ? (
             <div className="flex flex-row flex-wrap justify-center mx-auto items-start border-2 border-slate-700 rounded-3xl w-full h-fit">
+              <div
+                className="mx-auto text-2xl text-green-500 font-bold my-4">
+                Here are the items you need to have:
+              </div>
               {ingredients?.map((ingredient, index) =>
                 ingredient?.neededCount > 0 &&
                 (
