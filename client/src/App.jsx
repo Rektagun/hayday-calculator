@@ -11,6 +11,10 @@ function App() {
   const [countItems, setCountItems] = useState([]);
   const [ingredients, setIngredients] = useState([]);
 
+  function handlePrint() {
+    window.print();
+  }
+
   function handleChange(e) {
     setUserLevel(e.target.value);
   }
@@ -124,7 +128,7 @@ function App() {
     <div className="flex flex-col bg-slate-900 min-h-screen px-2 pt-4 pb-2 scroll-smooth">
       <h1 className="flex mx-auto text-center bg-gradient-to-bl to-slate-800 from-transparent text-5xl text-[#dacd81] border-2  border-[#daa181] rounded-2xl p-4 px-8 w-fit lobster">HayDay Inventory Manager</h1>
 
-      <section className="flex flex-row border-2 border-t-0 border-[#daa181] rounded-b-2xl bg-gradient-to-tr to-slate-800 from-transparent w-fit mx-auto p-4 gap-4">
+      <section className="flex flex-row border-2 border-t-0 border-[#daa181] rounded-b-2xl bg-gradient-to-tr to-slate-800 from-transparent w-fit mx-auto p-4 gap-4 no-print">
 
         <h1 className="flex text-slate-50 text-2xl m-auto">
           <span className="text-green-500 mr-2">Step-1{'>'}</span>
@@ -148,8 +152,9 @@ function App() {
 
       <div className="flex flex-row gap-1 mt-4">
 
-        <section className="text-white/90 w-full bg-slate-700/70 my-2 rounded-3xl flex flex-col">
+        <section className="text-white/90 w-full bg-slate-700/70 my-2 rounded-3xl flex flex-col no-print">
           <div className="flex-row flex justify-center items-center">
+
             <a href="https://rektagun.github.io/" target="_blank" rel="noopener noreferrer"
               className="mx-2 my-4 text-center w-fit flex bg-green-700/80 text-slate-50 text-sm rounded-md py-1 px-2 hover:bg-slate-600 active:bg-slate-400 duration-200 transition-colors">
               Made by: Suryaprakash Khatri
@@ -189,15 +194,23 @@ function App() {
             ) : (<></>)
           }
         </section>
-        <section className="text-white/90 w-full bg-slate-700/70 my-2 rounded-3xl flex flex-col justify-center items-center h-fit">
+        <section className="text-white/90 w-full bg-slate-700/70 my-2 rounded-3xl flex flex-col justify-center items-center h-fit printable">
           <div className="flex-row flex justify-center items-center">
           </div>
-          {ingredients && ingredients.length > 0 ? (
-            <div className="flex flex-row flex-wrap justify-center mx-auto items-start border-2 border-slate-700 rounded-3xl w-full h-fit">
+          {ingredients.length > 0 ? (
+            <div className="flex-row flex justify-center items-center gap-2">
+              <button className="border text-white font-semibold border-gray-300 bg-gray-200/20 w-fit h-fit rounded-md px-2 py-0.5 transition-colors duration-150 active:bg-gray-200/30 hover:bg-gray-200/10 no-print" onClick={() => handlePrint()}>
+                Print
+              </button>
               <div
                 className="mx-auto text-2xl text-green-500 font-bold my-4">
                 Here are the items you need to have:
               </div>
+            </div>
+          ) : <></>}
+          {ingredients && ingredients.length > 0 ? (
+            <div className="flex flex-row flex-wrap justify-center mx-auto items-start border-2 border-slate-700 rounded-3xl w-full h-fit">
+
               {ingredients?.map((ingredient, index) =>
                 ingredient?.neededCount > 0 &&
                 (

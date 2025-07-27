@@ -7,25 +7,24 @@
   font-style: normal;
 }
 
+@media print {
+  .printable {
+    visibility: visible;
+  }
+
+  .printable {
+    left: 0;
+    top: 0;
+    width: 100%;
+    position: absolute;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
+
 /* * { */
 /*   outline-style: solid; */
 /*   outline-width: thin; */
-/* } */
-
-
-/* :root { */
-/*   --bg-dark: #090d10; */
-/*   --bg: #121a21; */
-/*   --bg-light: #1b2731; */
-/*   --text: #f4f4f4; */
-/*   --text-muted: #b8b8b8; */
-/*   --highlight: #d9d9d9; */
-/*   --border: #5f80a6; */
-/*   --border-muted: #1b2731; */
-/*   --primary: #5f80a6; */
-/*   --secondary: #d6b7b1; */
-/*   --danger: hsl(9 26% 64%); */
-/*   --warning: hsl(52 19% 57%); */
-/*   --success: hsl(146 17% 59%); */
-/*   --info: hsl(217 28% 65%); */
 /* } */

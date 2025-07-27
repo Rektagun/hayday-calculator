@@ -26,15 +26,15 @@ const ItemCard = ({
   return (
     <div
       onClick={incrementCount}
-      className={`w-40 h-20 bg-slate-800 border hover:border-b-0 relative m-2 border-slate-600 rounded-2xl z-0 flex items-center pr-2 hover:border-t-slate-500 overflow-visible hover:shadow-inner hover:shadow-slate-600 group hover:cursor-pointer hover:scale-105 transition-all duration-75 select-none ease-in-out hover:drop-shadow-slate-950 hover:drop-shadow-md active:scale-95 drop-shadow-md drop-shadow-slate-800`}>
+      className={`w-32 h-16 bg-slate-800 border hover:border-b-0 relative m-2 border-slate-600 rounded-2xl z-0 flex items-center pr-2 hover:border-t-slate-500 overflow-visible hover:shadow-inner hover:shadow-slate-600 group hover:cursor-pointer hover:scale-105 transition-all duration-75 select-none ease-in-out hover:drop-shadow-slate-950 hover:drop-shadow-md active:scale-95 drop-shadow-md drop-shadow-slate-800`}>
       <img
         // onClick={incrementCount}
         // onContextMenu={(e) => { e.preventDefault(); decrementCount() }}
-        className="size-20 rounded-2xl z-10 group-hover:rotate-2 relative drop-shadow-slate-900 drop-shadow-lg group-hover:drop-shadow-xl group-hover:drop-shadow-slate-900 group-hover:scale-110 transition-all duration-300 ease-out" alt="" src={imageUrl} />
+        className="size-16 rounded-2xl z-10 group-hover:rotate-2 relative drop-shadow-slate-900 drop-shadow-lg group-hover:drop-shadow-xl group-hover:drop-shadow-slate-900 group-hover:scale-110 transition-all duration-300 ease-out" alt="" src={imageUrl} />
       <div
         // onClick={incrementCount}
         // onContextMenu={(e) => { e.preventDefault(); decrementCount() }}
-        className="flex flex-col text-slate-50 justify-start items-center h-fit mx-auto w-full">
+        className="flex flex-col overflow-hidden text-slate-50 justify-start items-center h-fit mx-auto w-full z-20">
         <div className="relative justify-center items-center flex gap-2">
           <p className="relative text-slate-100 font-bold text-lg">
             {count}
