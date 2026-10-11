@@ -28,6 +28,7 @@ const ItemCard = ({
       onClick={incrementCount}
       className={`w-32 h-16 bg-slate-800 border hover:border-b-0 relative m-2 border-slate-600 rounded-2xl z-0 flex items-center pr-2 hover:border-t-slate-500 overflow-visible hover:shadow-inner hover:shadow-slate-600 group hover:cursor-pointer hover:scale-105 transition-all duration-75 select-none ease-in-out hover:drop-shadow-slate-950 hover:drop-shadow-md active:scale-95 drop-shadow-md drop-shadow-slate-800`}>
       <img
+        referrerPolicy="no-referrer"
         // onClick={incrementCount}
         // onContextMenu={(e) => { e.preventDefault(); decrementCount() }}
         className="size-16 rounded-2xl z-10 group-hover:rotate-2 relative drop-shadow-slate-900 drop-shadow-lg group-hover:drop-shadow-xl group-hover:drop-shadow-slate-900 group-hover:scale-110 transition-all duration-300 ease-out" alt="" src={imageUrl} />
